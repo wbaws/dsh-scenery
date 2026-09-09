@@ -1,0 +1,64 @@
+{
+  "name": "dsh-scenery",
+  "version": "0.1.0",
+  "description": "Capy-style ambient background for the DeepSeek Harness workspace: pick an image, then the plugin composes it with a very large bottom black gradient and a soft radial 'aura' around the composer so the UI looks like it is sitting inside the scene. Additive only - existing UI, layout and behavior stay untouched.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "background",
+    "wallpaper",
+    "capy",
+    "gradient",
+    "aura",
+    "scenery",
+    "web-ui"
+  ],
+  "homepage": "https://github.com/wbaws/dsh-scenery#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wbaws/dsh-scenery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wbaws/dsh-scenery/issues"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check lib/index.js && node --check lib/client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  }
+}

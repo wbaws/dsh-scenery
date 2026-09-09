@@ -1,0 +1,13 @@
+# dsh-scenery bundle patch
+#
+# Installed through the official CLI:
+#
+#   dsh plugin --profile <name> add dsh-scenery
+#
+# or through the in-app plugin market (dshmarket). The loader stacks this
+# patch over the profile config and mounts the host half (lib/index.js).
+# The browser half (lib/client.js) is served automatically at
+# /plugins/dsh-scenery/client.js because package.json declares dsh.client.
+- insert:
+    - id: scenery
+      name: 'dsh-scenery'
