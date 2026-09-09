@@ -10,7 +10,7 @@ floating on a flat colour.
 > layout of existing components, and — unless you flip the switch — changes
 > absolutely nothing about the way DSH looks or behaves.
 
-| Scenery on — full scene | Scenery on — barely there |
+| Scenery on — semi-full scene | Scenery on — barely there |
 | --- | --- |
 | ![scenery on](docs/scenery-on.png) | ![scenery barely there](docs/scenery-subtle.png) |
 
